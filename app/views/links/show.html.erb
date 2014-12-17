@@ -1,0 +1,8 @@
+<h1><%= link_to @link.title, @link.url %></h1>
+<h2>Votes: <%= @link.votes %></h2>
+
+
+<%= link_to 'Back', links_path %>
+<%= link_to 'Edit Link', edit_link_path(@link) %>
+<%= link_to 'Delete Link', @link, method: :delete, data: { confirm: 'Delete link! Are you sure?' }%>
+
