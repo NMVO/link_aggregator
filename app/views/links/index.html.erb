@@ -1,12 +1,17 @@
-<h1>Link Finder</h1>
+<div class="panel panel-default">
+  <div class="panel-heading">
+<h1 class="panel-title">Link Finder</h1>
 <% @links.each do |link| %>
-  <div>
-	<h1><%= link_to link.title, link.url %></h1> 
-	<%= link.votes %>
-	<%= link_to "Upvote", upvote_path(link), method: :put %>
-	<%= link_to "Downvote", downvote_path(link), method: :put %>
-	<%= link_to "Inputs", link_path(link) %>
+  <div class="panel panel-info">
+	<div class="panel-body">
+	  <h1><%= link_to link.title, link.url %></h1> 
+	  <%= link.votes %>
+	  <%= link_to "Upvote", upvote_path(link), method: :put %>
+	  <%= link_to "Downvote", downvote_path(link), method: :put %>
+	  <%= link_to "Inputs", link_path(link) %>
 	</div>
+  </div>
+</div>
 <% end %>
 
 
